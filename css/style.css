@@ -4,6 +4,11 @@ html, body {
   padding: 0;
 }
 
+html, body * {
+  margin: 0;
+  padding: 0;
+}
+
 #logo {
   float: left;
 }
@@ -12,7 +17,25 @@ html, body {
   float: right;
 }
 
-#menu-tabs {
-  
+#top-links a {
+  margin: 0 0 0 10px;
 }
 
+#menu-nav {
+  margin: 20px 0 0;
+}
+
+#menu-tabs {
+  list-style: none;
+  float: left;
+}
+
+#menu-tabs li {
+  list-style: none;
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+#upload-btn {
+  float: right;
+}
