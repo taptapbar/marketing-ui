@@ -1,4 +1,18 @@
 /* Put your CSS here */
 html, body {
-    margin: 20px;
+  margin: 0;
+  padding: 0;
 }
+
+#logo {
+  float: left;
+}
+
+#top-links {
+  float: right;
+}
+
+#menu-tabs {
+  
+}
+

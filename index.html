@@ -4,13 +4,14 @@
 <meta charset="utf-8">
 <title>Intelligine</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <script type="text/x-handlebars">
-    <section id="top-nav">
-      <h1>Logo</h1>
+    <section id="top-nav" class="clearfix">
+      <h1 id="logo">Logo</h1>
     
       <div id="top-links">
         <a href="#">about</a>
@@ -21,9 +22,13 @@
     </section>
     
     <section id="menu-nav">
-      <div id="menu-tabs">
-        
-      </div>
+      <ul id="menu-tabs">
+        <li>{{#linkTo "multiview"}}Multi-View{{/linkTo}}</li>
+        <li>{{#linkTo "comparison"}}Comparison{{/linkTo}}</li>
+        <li>{{#linkTo "item_association"}}Item Association{{/linkTo}}</li>
+        <li>{{#linkTo "significance"}}Significance{{/linkTo}}</li>
+        <li>{{#linkTo "diagnosis"}}Sales Diagnosis{{/linkTo}}</li>
+      </ul>
       
       <div id="upload-btn">upload</div>
     </section>
@@ -33,7 +38,11 @@
 
   <script type="text/x-handlebars" data-template-name="index">
   </script>
-
+  
+  <script type="text/x-handlebars" data-template-name="multiview">
+  test
+  </script>
+  
   <script src="js/libs/jquery-1.9.1.js"></script>
   <script src="js/libs/handlebars-1.0.0-rc.3.js"></script>
   <script src="js/libs/ember-1.0.0-rc.3.js"></script>
