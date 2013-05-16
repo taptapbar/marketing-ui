@@ -10,7 +10,7 @@ brew install node
 PATH=$PATH:/usr/local/share/npm/bin
 
 # run this command under the project folder
-npm install 
+npm install -d
 npm install -g grunt-cli
 
 # install sass in rvm
