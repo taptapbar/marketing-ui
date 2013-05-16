@@ -7,27 +7,62 @@ html, body * {
   margin: 0;
   padding: 0; }
 
+#nav {
+  background-color: #e7e7e7; }
+
+#top-nav {
+  padding: 15px 20px 25px 20px; }
+
 #logo {
   float: left; }
+  #logo a {
+    text-decoration: none; }
 
 #top-links {
   float: right; }
   #top-links a {
-    margin: 0 0 0 10px; }
+    margin: 0 0 0 10px;
+    padding-left: 15px;
+    color: #323232;
+    border-left: 1px solid #323232; }
+    #top-links a.first {
+      border: none; }
 
 #menu-nav {
-  margin: 20px 0 0; }
+  margin: 20px 0 0;
+  border-bottom: 20px solid #94b3c6;
+  position: relative; }
 
 #menu-tabs {
   list-style: none;
-  float: left; }
+  float: left;
+  padding: 0 20px; }
   #menu-tabs li {
     list-style: none;
     float: left;
-    margin: 0 20px 0 0; }
+    margin: 0 10px 0 0;
+    height: 26px; }
+    #menu-tabs li a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #646464;
+      background-color: #ecf8ff;
+      padding: 5px 15px; }
+      #menu-tabs li a.active {
+        background-color: #94b3c6; }
 
 #upload-btn {
-  float: right; }
+  position: absolute;
+  right: 20px;
+  top: -5px;
+  cursor: pointer;
+  padding: 2px 6px;
+  color: #fff;
+  background-color: #0f6b93;
+  border: 2px solid #04344b; }
+
+#main-container {
+  background-color: #fff; }
 
 .popup-window-bg {
   width: 100%;
