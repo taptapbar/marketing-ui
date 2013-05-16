@@ -5,13 +5,13 @@
 <title>Intelligine</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
   <script type="text/x-handlebars">
     <section id="top-nav" class="clearfix">
-      <h1 id="logo">Logo</h1>
+      <h1 id="logo">{{#linkTo "index"}}Logo{{/linkTo}}</h1>
     
       <div id="top-links">
         <a href="#">about</a>
@@ -35,17 +35,12 @@
     
     {{outlet}}
   </script>
-
-  <script type="text/x-handlebars" data-template-name="index">
-  </script>
-  
-  <script type="text/x-handlebars" data-template-name="multiview">
-  test
-  </script>
   
   <script src="js/libs/jquery-1.9.1.js"></script>
   <script src="js/libs/handlebars-1.0.0-rc.3.js"></script>
   <script src="js/libs/ember-1.0.0-rc.3.js"></script>
+  
+  <script src="templates/templates.js"></script>
   <script src="js/app.js"></script>
 
 </body>
