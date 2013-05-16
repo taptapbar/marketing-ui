@@ -28,3 +28,18 @@ html, body * {
 
 #upload-btn {
   float: right; }
+
+.popup-window-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0px; }
+  .popup-window-bg .popup-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    width: 50%;
+    margin: -40% 0 0 -25%;
+    background-color: #fff; }
