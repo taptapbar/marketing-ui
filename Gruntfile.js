@@ -19,7 +19,8 @@ module.exports = function(grunt) {
         files: {
           'css/app.css': [
             'css/main.scss',
-            'css/filter.scss'
+            'css/filter.scss',
+            'css/multiview.scss'
           ]
         }
       }
