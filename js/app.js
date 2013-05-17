@@ -15,3 +15,7 @@ App.IndexRoute = Ember.Route.extend({
     return ['red', 'yellow', 'blue'];
   }
 });
+
+$(function () {
+  $('#tabs a:first').tab('show');
+})
