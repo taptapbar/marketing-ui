@@ -126,7 +126,6 @@ html, body * {
     float: left;
     margin: 0 2px 0 0;
     padding: 0px 6px 0px;
-    color: #fff;
     background-color: #a4b0b4;
     font-size: 21px;
     font-weight: bold;
@@ -134,6 +133,9 @@ html, body * {
     cursor: pointer; }
     #view-container .add-view-btn:hover {
       background-color: #7792a2; }
+    #view-container .add-view-btn a {
+      color: #fff;
+      text-decoration: none; }
   #view-container .chart-container {
     background-color: #e0e4e6;
     padding: 10px 10px;
@@ -150,3 +152,54 @@ html, body * {
     cursor: pointer; }
     #view-container .filters .filter:hover {
       background-color: #7792a2; }
+
+#create-view-container h2 {
+  color: #fff;
+  background-color: #4f6b7d;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 30px;
+  padding: 0 10px 2px; }
+#create-view-container .step {
+  border: 1px solid #4f6b7d; }
+#create-view-container h3 {
+  color: #000;
+  background-color: #7792a2;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 23px;
+  padding: 0 10px 2px; }
+#create-view-container .sub-step {
+  float: left;
+  border: 1px solid #7792a2;
+  margin: 20px;
+  width: 575px;
+  height: 300px; }
+  #create-view-container .sub-step .inner {
+    margin: 20px 30px; }
+#create-view-container .options {
+  float: left;
+  background-color: #9da2a4;
+  width: 200px;
+  height: 200px;
+  padding: 10px 0; }
+  #create-view-container .options .option {
+    color: #fff;
+    padding: 0 0 0 10px; }
+    #create-view-container .options .option:hover {
+      background-color: #169ca1; }
+#create-view-container .right-arrow {
+  float: left;
+  background: url(../img/sprite.png);
+  background-position: -266px 0;
+  width: 27px;
+  height: 43px;
+  margin: 80px 30px 0 40px; }
+#create-view-container .radio-input {
+  float: left;
+  margin: 0 20px 0 0; }
+  #create-view-container .radio-input input {
+    float: left; }
+  #create-view-container .radio-input span {
+    float: left;
+    margin: 0 0 0 5px; }
