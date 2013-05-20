@@ -53,18 +53,39 @@ html, body * {
   li {
     list-style: none;
     float: left;
-    margin: 0 10px 0 0;
-    height: 26px;
+    margin: 0 -18px 0 0;
+    height: 30px;
     
     a {
-      text-decoration: none;
-      font-size: 18px;
-      color: #646464;
-      background-color: #ecf8ff;
-      padding: 5px 15px;
+      .title {
+        float: left;
+        z-index: 1;
+        position: relative;
+        text-decoration: none;
+        font-size: 18px;
+        color: #646464;
+        background-color: #ecf8ff;
+        padding: 5px 15px;
+      }
+      
+      .corner {
+        background: url(../img/sprite.png) no-repeat;
+        background-position: -223px -4px;
+        width: 35px;
+        height: 30px;
+        display: inline-block;
+        z-index: 10;
+        position: relative;
+      }
       
       &.active {
-        background-color: #94b3c6;
+        .title {
+          background-color: #94b3c6;
+        }
+        
+        .corner {
+          background-position: -175px -4px;
+        }
       }
     }
   }

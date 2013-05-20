@@ -40,16 +40,29 @@ html, body * {
   #menu-tabs li {
     list-style: none;
     float: left;
-    margin: 0 10px 0 0;
-    height: 26px; }
-    #menu-tabs li a {
+    margin: 0 -18px 0 0;
+    height: 30px; }
+    #menu-tabs li a .title {
+      float: left;
+      z-index: 1;
+      position: relative;
       text-decoration: none;
       font-size: 18px;
       color: #646464;
       background-color: #ecf8ff;
       padding: 5px 15px; }
-      #menu-tabs li a.active {
-        background-color: #94b3c6; }
+    #menu-tabs li a .corner {
+      background: url(../img/sprite.png) no-repeat;
+      background-position: -223px -4px;
+      width: 35px;
+      height: 30px;
+      display: inline-block;
+      z-index: 10;
+      position: relative; }
+    #menu-tabs li a.active .title {
+      background-color: #94b3c6; }
+    #menu-tabs li a.active .corner {
+      background-position: -175px -4px; }
 
 #upload-btn {
   position: absolute;
