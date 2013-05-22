@@ -20,7 +20,8 @@ module.exports = function(grunt) {
           'css/app.css': [
             'css/main.scss',
             'css/filter.scss',
-            'css/multiview.scss'
+            'css/multiview.scss',
+            'css/timeframe.scss'
           ]
         }
       }

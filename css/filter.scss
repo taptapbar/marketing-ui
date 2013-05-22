@@ -11,9 +11,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 390px;
-    width: 300px;
-    margin: -195px 0 0 -150px;
+    height: auto;
+    width: 340px;
+    margin: -195px 0 0 -170px;
     background-color: #fff;
   }
 }
@@ -21,13 +21,13 @@
 .popup-window-header {
   background-color: #6c6c6c;
   color: #fff;
-  font-size: 10pt;
-  padding-left: 6pt;
+  font-size: 14px;
+  padding-left: 14px;
 }
 
 .popup-window-body {
   margin: 14px 14px 6px 14px;
-  font-size: 8pt;
+  font-size: 13px;
 
   .popup-window-nav {
     margin-bottom: 0px;
@@ -65,7 +65,7 @@
   .btn-popup {
     background-color: #6c6c6c;
     border: 1px solid #000;
-    font-size: 8pt;
+    font-size: 12px;
     color: #fff;
     width: 50px;
     margin-right: 10px;
@@ -78,6 +78,27 @@
   label, input, button, select, textarea {
     font-size: 12px;
   }
+
+  .input-filter {
+    width: 100px;
+    height: 10px;
+    background-color: #9c9c9c;
+    border-radius: 0;
+    &:-moz-placeholder{color:#3c3c3c;}
+    &:-ms-input-placeholder{color:#3c3c3c;}
+    &::-webkit-input-placeholder{color:#3c3c3c;}
+  }
+
+  .select {
+    width: 90px;
+    height: 19px;
+    background-color: #9da2a4;
+  }
+
+  .border-box {
+    border: 1px solid #9c9c9c;
+    padding: 10px 5px 10px 5px;
+  }
 }
 
 .popup-window-footer {
@@ -87,7 +108,7 @@
     a {
       background-color: #4a4a4a;
       border: 2px solid #7f7f7f;
-      font-size: 10pt;
+      font-size: 14px;
       color: #fff;
       width: 60px;
       display: inline-block;
@@ -98,4 +119,14 @@
   .pull-right {
     margin-left: 10px;
   }
+}
+
+.float-right {
+  float:right;
+}
+.float-left {
+  float:left;
+}
+.clear {
+  clear:both;
 }

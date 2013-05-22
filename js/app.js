@@ -8,6 +8,7 @@ App.Router.map(function() {
   this.route('significance',     { path: "/significance" });
   this.route('diagnosis',        { path: "/diagnosis" });
   this.route('filter',           { path: "/filter" });
+  this.route('timeframe',        { path: "/timeframe" });
 });
 
 App.IndexRoute = Ember.Route.extend({
