@@ -43,7 +43,7 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
 Ember.TEMPLATES["multiview"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [2,'>= 1.0.0-rc.3'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
-  var buffer = '', stack1, stack2, hashTypes, options, self=this, helperMissing=helpers.helperMissing;
+  var buffer = '', stack1, stack2, hashTypes, options, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 function program1(depth0,data) {
   
@@ -68,7 +68,15 @@ function program5(depth0,data) {
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "multiview_new", options) : helperMissing.call(depth0, "linkTo", "multiview_new", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push("</div>\n  </div>\n  \n  <div class=\"chart-container\">\n    <div class=\"chart\">\n      <img src=\"img/chart.png\" />\n    </div>\n    \n    <div class=\"filters clearfix\">\n      <div class=\"filter\">");
+  data.buffer.push("</div>\n  </div>\n  \n  <div class=\"chart-container\">\n    <div class=\"chart\">\n      ");
+  hashTypes = {'id': "ID",'contentBinding': "ID",'categoriesBinding': "ID",'titleBiding': "STRING"};
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.ColumnGraphView", {hash:{
+    'id': ("chart-multiview"),
+    'contentBinding': ("content"),
+    'categoriesBinding': ("categories"),
+    'titleBiding': ("This is a Column Graph")
+  },contexts:[depth0],types:["ID"],hashTypes:hashTypes,data:data})));
+  data.buffer.push("\n    </div>\n    \n    <div class=\"filters clearfix\">\n      <div class=\"filter\">");
   hashTypes = {};
   options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "timeframe", options) : helperMissing.call(depth0, "linkTo", "timeframe", options));

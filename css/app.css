@@ -306,6 +306,10 @@ html, body * {
     float: left;
     margin: 0 0 0 5px; }
 
+#chart-multiview {
+  width: 100%;
+  height: 425px; }
+
 #timeframe-container {
   border: 1px solid #000;
   border-radius: 6px;
