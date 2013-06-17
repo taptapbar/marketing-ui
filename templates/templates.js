@@ -70,7 +70,7 @@ function program5(depth0,data) {
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("</div>\n  </div>\n  \n  <div class=\"chart-container\">\n    <div class=\"chart\">\n      ");
   hashTypes = {'id': "ID",'contentBinding': "ID",'categoriesBinding': "ID",'titleBiding': "STRING"};
-  data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.ColumnGraphView", {hash:{
+  data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.ColumnChartView", {hash:{
     'id': ("chart-multiview"),
     'contentBinding': ("content"),
     'categoriesBinding': ("categories"),
