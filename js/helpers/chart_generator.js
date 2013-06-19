@@ -13,14 +13,21 @@ App.ChartGenerator = Ember.Object.extend({
     }
   },
   
-  render: function(render_to, type, data, categories, title) {
+  render: function(render_to, type, data, categories, title, measurement) {
     var chart     = this.chartConfig(type).create();
     var chartType = this.chartType(type);
+    var plotOptions = chart.get('plotOptions');
+    // if data consists of 'stack' property for each serie, then render stacked chart
+    if(data[0].hasOwnProperty('stack')){ 
+      plotOptions['column'] = { stacking: 'normal' };
+      chart.set('plotOptions', plotOptions)
+    };
     chart.set('chartType', chartType);
     chart.set('renderToId', render_to);
     chart.set('series', data);
     chart.set('categories', categories);
     chart.set('title', title);
+    chart.set('measurement', measurement);
     chart.initialize();
     return new Highcharts.Chart(chart);
   }
@@ -34,7 +41,7 @@ App.ChartConfig = Ember.Object.create({
   series: null,
   categories: null,
   initialize: function() {
-    var chart, title, xAxis;
+    var chart, title, xAxis, measurement;
     //this.sub_initialize();
     chart = {
       renderTo: this.get('renderToId'),
@@ -44,11 +51,17 @@ App.ChartConfig = Ember.Object.create({
       categories: this.get('categories'),
       max: 10
     };
+    yAxis = {
+      title: {
+        text: this.get('measurement')
+      }
+    };
     title = {
       text: this.get('title')
     };
     this.set('chart', chart);
     this.set('xAxis', xAxis);
+    this.set('yAxis', yAxis);
     return this.set('title', title);
   },
   credits: {
@@ -60,11 +73,11 @@ App.ChartConfig = Ember.Object.create({
 App.ColumnChartConfig = Ember.Object.extend(App.ChartConfig, {
   init: function () {
     var yAxis, plotOptions;
-    yAxis = {
+    /*yAxis = {
       title: {
         text: "Measurement"
       }
-    };
+    };*/
     plotOptions = {
       bar: {
         animation: false,
@@ -86,7 +99,7 @@ App.ColumnChartConfig = Ember.Object.extend(App.ChartConfig, {
     scrollbar = {
       enabled: true
     },
-    this.set('yAxis', yAxis);
+    //this.set('yAxis', yAxis);
     this.set('plotOptions', plotOptions);
     this.set('tooltip', tooltip);
     this.set('scrollbar', scrollbar);

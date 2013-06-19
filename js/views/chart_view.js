@@ -5,13 +5,20 @@ App.ChartView = Ember.View.extend({
   type: 'column',
   didInsertElement: function() {
     var chartGenerator = new App.ChartGenerator();
-    var view = App.BigObjectView.find(1);
-    
+    // var view = App.BigObjectView.find(1);
+    var view = App.BigObjectView.createRecord();
     var that = this;
-    var renderedChart;
-    view.then(function(){
-      renderedChart = chartGenerator.render(that.elementId, that.type, view.get('dataValues'), view.get('categories'), that.title);
+    // probably should have moved rendered Charts to global scope to maintain charts on each tab
+    var renderedCharts = [];
+    view.fetchChartData().then(function (chartDatas) {
+      chartDatas.forEach(function (chartData) {
+        renderedCharts.push(chartGenerator.render(that.elementId, that.type, chartData.get('dataValues'), chartData.get('categories'), that.title, chartData.get('measurement')));
+      })
     });
-    return renderedChart;
+        
+    //view.then(function(){
+    //  renderedChart = chartGenerator.render(that.elementId, that.type, chartData.get('dataValues'), chartData.get('categories'), that.title, view.get('measurement'));
+    //});
+    //return renderedChart;
   }
 });
